@@ -11,6 +11,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+  font-family: "San Francisco", Helvetica, Arial, san-serif;
 }
 
 .navbar {
@@ -60,9 +62,50 @@ body {
 
 .right-click {
   display: none;
-  height: 100px;
-  width: 100px;
+  height: 163px;
+  width: 163px;
+  font-family: "San Francisco", Helvetica, Arial, san-serif;
   border: 2px solid red;
   position: absolute;
   top: 0px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.19);
+  border: 1px solid hsla(0, 0%, 100%, 0.335);
+  border-radius: 8px;
+  box-shadow: 0 0 3.35px #000;
+  cursor: url(../public/resources/cursor.png), auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3px;
+  left: 0;
+  opacity: 1;
+  padding: 11px 4px 8px 7px;
+  position: absolute;
+  top: 30px;
+  width: 16em;
+  z-index: 20 !important;
+}
+.right-click-container {
+}
+
+.right-click-items {
+  order: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 10.6px;
+  margin-bottom: 3px;
+  padding: 0 8px;
+  -webkit-transform: scaleY(1.03);
+  transform: scaleY(1.03);
+}
+.right-click-items:hover {
+  background-color: #66d4ff;
+  color: #000 !important;
+  cursor: url(../public/resources/pointing.png), auto;
+}
+.context-divider {
+  background-color: hsla(0, 0%, 100%, 0.335);
+  height: 1px;
+  margin: 2px 3px 3px 0;
 }
