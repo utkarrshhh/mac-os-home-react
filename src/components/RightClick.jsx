@@ -10,13 +10,13 @@ const RightClick = () => {
     box.style.display = "block";
   };
 
-  let body = document.body;
-  body.addEventListener("contextmenu", (e) => rightClickDisplay(e));
+  // let body = document.body;
+  document.addEventListener("contextmenu", (e) => rightClickDisplay(e));
   document.addEventListener("click", () => {
     box.style.display == "block" ? (box.style.display = "none") : "";
   });
   return (
-    <div className="right-click right-click-container" id="right-click">
+    <div className="right-click right-click-container " id="right-click">
       <div className="right-click-items">New Folder</div>
       <div className=" context-divider"></div>
       <div className="right-click-items">Get Info</div>
