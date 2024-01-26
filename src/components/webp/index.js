@@ -1,0 +1,10 @@
+export { default as applemusic } from "./applemusic.png";
+export { default as discord } from "./discord.png";
+export { default as netflix } from "./netflix.png";
+export { default as twitter } from "./twitter.png";
+export { default as photos } from "./photos.png";
+export { default as github } from "./github.png";
+export { default as arcade } from "./arcade.png";
+export { default as calendar } from "./calendar.png";
+export { default as finder } from "./finder.png";
+export { default as weather } from "./weather.png";

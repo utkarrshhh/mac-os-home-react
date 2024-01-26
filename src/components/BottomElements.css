@@ -1,0 +1,47 @@
+.bottom-ele-container {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.item-container {
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background-color: rgba(27, 27, 29, 0.4);
+  border-radius: 18px;
+  bottom: 9px;
+  box-shadow: 0 0 4px #000;
+  display: flex;
+  gap: 2px;
+
+  height: 71px !important;
+  justify-content: center;
+  margin-top: 50px;
+  min-width: 490px;
+  overflow-y: visible !important;
+  position: absolute;
+}
+
+.bottom-items {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  cursor: url(../public/resources/pointing.png), auto;
+}
+
+.division {
+  background-color: #555454;
+  height: 62px;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 1px;
+}
+.hover-prop:hover {
+  transform: scale(1.25);
+  margin-bottom: 35px;
+  transition: 0.3s ease-in;
+  .item-container {
+  }
+}
