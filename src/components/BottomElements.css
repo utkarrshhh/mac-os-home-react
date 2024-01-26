@@ -38,10 +38,32 @@
   margin-right: 2px;
   width: 1px;
 }
+.tool-tip {
+  align-items: center;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  font-size: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #707272;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  padding: 2px 8px 3px;
+  position: absolute;
+  top: -20px;
+  left: 2px;
+  transition: all 0.2s;
+  visibility: hidden;
+}
+
 .hover-prop:hover {
   transform: scale(1.25);
   margin-bottom: 35px;
   transition: 0.3s ease-in;
-  .item-container {
+  .tool-tip {
+    opacity: 1;
+    visibility: visible;
   }
 }

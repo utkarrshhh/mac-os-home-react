@@ -112,3 +112,41 @@ body {
   height: 1px;
   margin: 2px 3px 3px 0;
 }
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.19);
+  border: 1px solid hsla(0, 0%, 100%, 0.335);
+  border-radius: 8px;
+  box-shadow: 0 0 3.35px #000;
+  /* cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpSoVBTuIiGSoThZERRylikWwUNoKrTqYXPoFTRqSFBdHwbXg4Mdi1cHFWVcHV0EQ/ABxdHJSdJES/5cUWsR4cNyPd/ced+8AoV5mqtkxAaiaZSRjUTGTXRUDrwiiG/0YQVhiph5PLabhOb7u4ePrXYRneZ/7c/QqOZMBPpF4jumGRbxBPLNp6Zz3iUOsKCnE58TjBl2Q+JHrsstvnAsOCzwzZKST88QhYrHQxnIbs6KhEk8ThxVVo3wh47LCeYuzWq6y5j35C4M5bSXFdZrDiGEJcSQgQkYVJZRhIUKrRoqJJO1HPfxDjj9BLplcJTByLKACFZLjB/+D392a+alJNykYBTpfbPtjFAjsAo2abX8f23bjBPA/A1day1+pA7OfpNdaWvgI6NsGLq5bmrwHXO4Ag0+6ZEiO5Kcp5PPA+xl9UxYYuAV61tzemvs4fQDS1NXyDXBwCIwVKHvd491d7b39e6bZ3w+Qm3Kzn+eOpgAAAAZiS0dEACsAKgAv0VlbBQAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+YMCRMRLiVew0IAAAGPSURBVDjLndS/amJBFMfxn5OVrNdCpggBl8BWQoq1CqQLdmkMRFD2Hewtln2BfYL4Aj5AVmEThICVlZ1NEG5iCq/IFSGIsIF1v1tsImr8c70Hpjkz85mZM8MIOAX2FTKMpDNJP4GPYQFJOpd0HQYxkjQYDNTv90MhRpJ831cmk5HnebsjQKndbiOJVCpFr9cDuA2MzAOhkGVgZ2QVsBOyDgiMbAICIduArUgQYBNiNhU4FovJWitrrXzfVz6f12g0WnhsH5YnOY4jx3E0HA6VTCbV6XRkzLt13pDLhZ54PK5araZisShJcl1X9Xpdkm4knSy175KcWQ0SiQTNZhNg5Hke0WgUSWSzWYAX4HDtNXa7XVqtFkAX+AI8FwoFJGGMwXVdgG9rAf7HA/D5NXfVaDRmN1AqlQCegL11wD3waS53DPxNp9NIwlrLZDIBuFgFZFedD7grl8uzXVQqFYBfu/wTufF4TC6Xo1qtMp1OAX4DB0GBPeDxtT594AdwtDwusgX5Kmkq6ToSifxZNeYf6k2+j8KlixsAAAAASUVORK5CYII=),auto; */
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  left: 0;
+  padding: 11px 4px 8px 7px;
+  position: absolute;
+  top: 30px;
+  width: 200px;
+  z-index: 20 !important;
+}
+.dropdown-menu::after {
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1 !important;
+}
+.dropdown-item {
+  border: none;
+  border-radius: 4px;
+  font-family: SF Regular;
+  font-size: 14.6px;
+  padding: 0 8px;
+  -webkit-transform: scaleY(1.03);
+  transform: scaleY(1.03);
+}

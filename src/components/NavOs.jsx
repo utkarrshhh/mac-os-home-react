@@ -1,4 +1,5 @@
 import React from "react";
+import EditDropDown from "./EditDropDown.jsx";
 
 const NavOs = () => {
   let date = new Date();
@@ -8,7 +9,16 @@ const NavOs = () => {
   const period = hours >= 12 ? "PM" : "AM";
   const hours12 = hours % 12 || 12;
   const formattedTime = `${hours12}:${minutes} ${period}`;
-
+  let selected = false;
+  const selectedCheck = () => {
+    if (selected) {
+      selected = false;
+      return null;
+    } else {
+      selected = true;
+      return <EditDropDown />;
+    }
+  };
   return (
     <div className="navbar">
       <div className="left">
@@ -20,7 +30,9 @@ const NavOs = () => {
           />
         </div>
         <div className="left-items ">Finder</div>
-        <div className="left-items">File</div>
+        <div className="left-items" onClick={selectedCheck}>
+          File
+        </div>
         <div className="left-items">Edit</div>
         <div className="left-items">View</div>
         <div className="left-items">Go</div>
