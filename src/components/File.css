@@ -1,0 +1,13 @@
+.File-drop-down {
+  position: absolute;
+
+  height: 100px;
+  width: 100px;
+}
+.nav-drop-down-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+}

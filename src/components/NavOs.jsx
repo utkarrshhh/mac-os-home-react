@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Settings from "./Settings";
+import { File, Go, View, Windows, Edit, Help } from "./index";
 const NavOs = () => {
   let date = new Date();
   console.log(date);
@@ -10,6 +11,7 @@ const NavOs = () => {
   const formattedTime = `${hours12}:${minutes} ${period}`;
   const [isActive, setisActive] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedName, setSelectedName] = useState(null);
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +21,9 @@ const NavOs = () => {
         navbarRef.current &&
         !navbarRef.current.contains(event.target)
       ) {
+        console.log(navbarRef.current);
         setSelectedItem(null);
+        setSelectedName(null);
       }
     };
 
@@ -30,8 +34,9 @@ const NavOs = () => {
     };
   }, []);
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
+  const handleItemClick = (Item) => {
+    setSelectedItem(Item);
+    setSelectedName(Item);
   };
 
   let x = null;
@@ -56,66 +61,86 @@ const NavOs = () => {
           }}
         >
           Finder
+          {selectedName == "Finder" && <Finder />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "File" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("File");
-          }}
-        >
-          File
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "File" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("File");
+            }}
+          >
+            File
+          </div>
+          {selectedName == "File" && <File />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "Edit" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("Edit");
-          }}
-        >
-          Edit
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "Edit" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("Edit");
+            }}
+          >
+            Edit
+          </div>
+          {selectedName == "Edit" && <Edit />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "View" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("View");
-          }}
-        >
-          View
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "View" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("View");
+            }}
+          >
+            View
+          </div>
+          {selectedName == "View" && <View />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "Go" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("Go");
-          }}
-        >
-          Go
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "Go" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("Go");
+            }}
+          >
+            Go
+          </div>
+          {selectedName == "Go" && <Go />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "Windows" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("Windows");
-          }}
-        >
-          Windows
+
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "Windows" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("Windows");
+            }}
+          >
+            Windows
+          </div>
+          {selectedName == "Windows" && <Windows />}
         </div>
-        <div
-          className={`left-items ${
-            selectedItem === "Help" ? "selected-one" : ""
-          }`}
-          onClick={(e) => {
-            handleItemClick("Help");
-          }}
-        >
-          Help
+        <div>
+          <div
+            className={`left-items ${
+              selectedItem === "Help" ? "selected-one" : ""
+            }`}
+            onClick={(e) => {
+              handleItemClick("Help");
+            }}
+          >
+            Help
+          </div>
+          {selectedName == "Help" && <Help />}
         </div>
       </div>
       <div className="right">

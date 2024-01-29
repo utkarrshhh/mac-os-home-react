@@ -23,6 +23,7 @@ body {
   position: absolute;
   top: 0;
   width: 100vw;
+  height: 15.4px !important;
   /* justify-content: flex-end; */
   color: #e8d9d9;
   font-size: 11px;
