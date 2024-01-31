@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BottomElements.css";
 import {
   applemusic,
@@ -13,9 +13,40 @@ import {
   photos,
 } from "./webp/index.js";
 
-const BottomElements = () => {
+const BottomElements = ({
+  position,
+  zIndex,
+  isMinimize,
+  folderImage,
+  name,
+}) => {
+  const handleNewFolder = (folderImage, name) => {
+    return (
+      <>
+        <div className="division"></div>
+        <div className=" hover-prop" style={{ alignItems: "center" }}>
+          <div className="tool-tip">{name}</div>
+          <img src={folderImage} alt="" className="bottom-items" />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <hr style={{ width: "40%" }} />
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  console.log(isMinimize);
   return (
-    <div className="bottom-ele-container">
+    <div
+      className="bottom-ele-container"
+      style={{ zIndex: zIndex, position: position }}
+    >
       <div className="item-container">
         <div className=" hover-prop">
           <div className="tool-tip">Music</div>
@@ -59,9 +90,17 @@ const BottomElements = () => {
           <div className="tool-tip">Arcade</div>
           <img src={arcade} alt="" className="bottom-items" />
         </div>
+        {console.log(isMinimize)}
+        {isMinimize && handleNewFolder(folderImage, name)}
       </div>
     </div>
   );
+};
+
+BottomElements.defaultProps = {
+  isMinimize: false,
+  folderImage: null,
+  name: null,
 };
 
 export default BottomElements;

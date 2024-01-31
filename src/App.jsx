@@ -11,7 +11,6 @@ const App = () => {
         <RightClick />
         <NavOs />
         <Folder />
-        <BottomElements />
       </NoteState>
     </div>
   );
