@@ -1,0 +1,67 @@
+.folder-container2 {
+  height: 70vh;
+  width: 80vh;
+  /* border: 2px solid red; */
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+}
+.left-nav-items {
+  display: flex;
+  gap: 3px;
+}
+
+.folder-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2e2d31;
+  border-bottom: 1px solid #141318;
+  padding: 0 4px;
+}
+
+.folder-contents {
+  background-color: #1e1f23;
+  height: 100%;
+  width: auto;
+}
+
+.icons-used {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.icons-used:hover {
+  /* transform: scale(1.01); */
+  .svg-close {
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .close {
+    top: 1px;
+    left: 1px;
+  }
+  .stretch {
+  }
+  .minimize {
+    top: 4px;
+    left: 2px;
+  }
+  cursor: url(../public/resources/pointing.png), auto;
+}
+
+.svg-close {
+  display: none;
+}
+.item-2 {
+  background: red;
+}
+
+.item-1 {
+  background: yellow;
+}
+.item-3 {
+  background-color: #30d158;
+}

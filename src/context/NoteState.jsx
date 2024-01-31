@@ -34,7 +34,7 @@ const NoteState = (props) => {
             className="folder-icon"
             alt="folder"
           />
-          <h5>{folder.name}</h5>
+          <h5 style={{ color: "#c0c0c0" }}>{folder.name}</h5>
         </div>
       ))}
       {props.children}
