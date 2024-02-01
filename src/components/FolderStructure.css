@@ -26,6 +26,8 @@
   background-color: #1e1f23;
   height: 100%;
   width: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .icons-used {

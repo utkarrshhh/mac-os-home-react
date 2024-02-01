@@ -10,7 +10,7 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
   const handleClickOutside = (e) => {
     if (folderRef.current && !folderRef.current.contains(e.target)) {
       setIsMinimize(false);
-      setIsOpen(!isOpen);
+      //   setIsOpen(!isOpen);
     }
   };
 
@@ -84,7 +84,7 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
             isMinimize={isMinimize}
             folderImage="../public/resources/mac-folder.png"
             name="Projects"
-            //   setIsMinimize={setIsMinimize}
+            setIsMinimize={setIsMinimize}
           />
         )}
       </div>

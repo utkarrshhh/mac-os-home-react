@@ -19,12 +19,17 @@ const BottomElements = ({
   isMinimize,
   folderImage,
   name,
+  setIsMinimize,
 }) => {
   const handleNewFolder = (folderImage, name) => {
     return (
       <>
         <div className="division"></div>
-        <div className=" hover-prop" style={{ alignItems: "center" }}>
+        <div
+          className=" hover-prop"
+          style={{ alignItems: "center" }}
+          onClick={() => setIsMinimize(false)}
+        >
           <div className="tool-tip">{name}</div>
           <img src={folderImage} alt="" className="bottom-items" />
           <div
@@ -37,6 +42,7 @@ const BottomElements = ({
             <hr style={{ width: "40%" }} />
           </div>
         </div>
+        {/* {setIsMinimize(false)} */}
       </>
     );
   };
@@ -101,6 +107,7 @@ BottomElements.defaultProps = {
   isMinimize: false,
   folderImage: null,
   name: null,
+  setIsMinimize: null,
 };
 
 export default BottomElements;
