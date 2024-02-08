@@ -3,7 +3,7 @@
   width: 80vh;
   /* border: 2px solid red; */
   position: absolute;
-
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
 }
