@@ -3,13 +3,13 @@ import "./FolderStructure.css";
 import "./wallpaper.css";
 const BackgroundImage = () => {
   const backgroundData = [
-    "bigsur.jpg",
-    "bigsurgraphic.jpg",
-    "catalina.jpg",
-    "catalina_day.jpg",
-    "solargrad.jpg",
-    "thedesert.jpg",
-    "ventura.jpg",
+    "bigsur",
+    "bigsurgraphic",
+    "catalina",
+    "catalina_day",
+    "solargrad",
+    "thedesert",
+    "ventura",
   ];
   return (
     <div className="transition-container">
@@ -55,11 +55,11 @@ const BackgroundImage = () => {
             {backgroundData.map((imageName, index) => (
               <div key={index} className="wallpaper-preview">
                 <img
-                  src={`../public/resources/wallpapers/${imageName}`}
+                  src={`../public/resources/wallpapers/${imageName}.jpg`}
                   alt={`Wallpaper ${index + 1}`}
                   className="wallpaper-image"
                 />
-                <p>{imageName}</p>
+                <p>{`${imageName}`}</p>
               </div>
             ))}
           </div>

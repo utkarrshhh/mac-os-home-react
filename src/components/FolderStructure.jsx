@@ -19,6 +19,12 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
     setIsMinimize(!isMinimize);
   };
 
+  const handleClose = () => {
+    console.log("close clicked");
+    setIsClose(true);
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
 
@@ -39,10 +45,7 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
         >
           <div className="folder-navbar">
             <div className="left-nav-items">
-              <div
-                className="item-2 icons-used"
-                onClick={() => setIsClose(true)}
-              >
+              <div className="item-2 icons-used" onClick={handleClose}>
                 <img
                   src="../public/svg/close.svg"
                   alt="logo"
