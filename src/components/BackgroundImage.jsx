@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FolderStructure.css";
 import "./wallpaper.css";
 const BackgroundImage = () => {
+  const handleBackground = (e) => {
+    document.body.style.background = `url(${e.target.src}  )`;
+  };
   const backgroundData = [
     "bigsur",
     "bigsurgraphic",
@@ -53,7 +56,11 @@ const BackgroundImage = () => {
         <div className="folder-contents">
           <div className="wallpaper-folder">
             {backgroundData.map((imageName, index) => (
-              <div key={index} className="wallpaper-preview">
+              <div
+                key={index}
+                className="wallpaper-preview"
+                onClick={(e) => handleBackground(e)}
+              >
                 <img
                   src={`../public/resources/wallpapers/${imageName}.jpg`}
                   alt={`Wallpaper ${index + 1}`}
