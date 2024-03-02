@@ -59,7 +59,7 @@ const BackgroundImage = () => {
                   alt={`Wallpaper ${index + 1}`}
                   className="wallpaper-image"
                 />
-                <p>{`${imageName}`}</p>
+                <p>{`${imageName.toUpperCase()}`}</p>
               </div>
             ))}
           </div>
