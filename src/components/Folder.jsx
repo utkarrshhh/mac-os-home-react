@@ -18,7 +18,7 @@ const Folder = () => {
         onDoubleClick={handleDoubleClick}
       >
         <img
-          src="../public/resources/mac-folder.png"
+          src="/resources/mac-folder.png"
           className="folder-icon"
           alt="folder"
         />
