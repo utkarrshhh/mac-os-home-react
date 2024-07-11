@@ -47,7 +47,7 @@ const NavOs = () => {
       <div className="left" ref={navbarRef}>
         <div className="left-items logo-container ">
           <img
-            src="../public/resources/apple.png"
+            src="/resources/apple.png"
             alt="logo"
             className="logo"
           />
@@ -154,7 +154,7 @@ const NavOs = () => {
           }}
         >
           <img
-            src="../public/resources/tools.png"
+            src="/resources/tools.png"
             className="tools"
             alt="tools"
           />
