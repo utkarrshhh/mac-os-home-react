@@ -25,21 +25,21 @@ const BackgroundImage = () => {
           <div className="left-nav-items">
             <div className="item-2 icons-used" id="closeButton">
               <img
-                src="../public/svg/close.svg"
+                src="/svg/close.svg"
                 alt="logo"
                 className="svg-close close"
               />
             </div>
             <div className="item-1 icons-used" id="minimizeButton">
               <img
-                src="../public/svg/minimize.svg"
+                src="/svg/minimize.svg"
                 alt="nothing"
                 className="svg-close minimize"
               />
             </div>
             <div className="item-3 icons-used" id="stretchButton">
               <img
-                src="../public/svg/stretch.svg"
+                src="/svg/stretch.svg"
                 alt="logo"
                 className="svg-close stretch"
               />
@@ -47,7 +47,7 @@ const BackgroundImage = () => {
           </div>
           <div className="right-nav-items">
             <img
-              src="../public/resources/fullscreen.png"
+              src="/resources/fullscreen.png"
               alt=""
               style={{ height: "10px", width: "10px" }}
             />
@@ -62,7 +62,7 @@ const BackgroundImage = () => {
                 onClick={(e) => handleBackground(e)}
               >
                 <img
-                  src={`../public/resources/wallpapers/${imageName}.jpg`}
+                  src={`/resources/wallpapers/${imageName}.jpg`}
                   alt={`Wallpaper ${index + 1}`}
                   className="wallpaper-image"
                 />
