@@ -47,21 +47,21 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
             <div className="left-nav-items">
               <div className="item-2 icons-used" onClick={handleClose}>
                 <img
-                  src="../public/svg/close.svg"
+                  src="/svg/close.svg"
                   alt="logo"
                   className="svg-close close"
                 />
               </div>
               <div className="item-1 icons-used" onClick={handleMinimize}>
                 <img
-                  src="../public/svg/minimize.svg"
+                  src="/svg/minimize.svg"
                   alt="nothing"
                   className="svg-close minimize"
                 />
               </div>
               <div className="item-3 icons-used">
                 <img
-                  src="../public/svg/stretch.svg"
+                  src="/svg/stretch.svg"
                   alt="logo"
                   className="svg-close stretch"
                 />
@@ -69,7 +69,7 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
             </div>
             <div className="right-nav-items">
               <img
-                src="../public/resources/fullscreen.png"
+                src="/resources/fullscreen.png"
                 alt=""
                 style={{ height: "10px", width: "10px" }}
               />
@@ -85,7 +85,7 @@ const FolderStructure = ({ isOpen, setIsOpen }) => {
             position={"absolute"}
             zIndex={5}
             isMinimize={isMinimize}
-            folderImage="../public/resources/mac-folder.png"
+            folderImage="/resources/mac-folder.png"
             name="Projects"
             setIsMinimize={setIsMinimize}
           />
